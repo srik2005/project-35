@@ -32,8 +32,8 @@ function setup() {
     submitButton = createButton('submit') ;
     submitButton.position(width - (width / 8),height -( height/ 8));
     submitButton.mousePressed(()=>{ 
-      
-      database.ref('question1').set({ 'ans' : ans1.value() })
+            database.ref('questions').set({ 'ans1' : ans1.value(),'ans2': ans2.value(),'ans3':ans3.value() })
+
       q1.hide();
        ans1.hide();
         submitButton.hide();
